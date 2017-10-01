@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <manifest package="com.android.alovia.projectqrcode" xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <application android:theme="@style/ToRTheme"
+        android:supportsRtl="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:allowBackup="true">
+
+    <activity android:name=".Login">
+    <intent-filter>
+    <action android:name="android.intent.action.MAIN"/>
+    <category android:name="android.intent.category.LAUNCHER"/>
+</intent-filter>
+</activity>
+    <activity android:name=".AdminArea"/>
+    <activity android:name=".UserArea"/>
+    <activity android:name=".Register"/>
+    <activity android:name=".Generatecode"/>
+    <activity android:name=".Scanqrcode"/>
+    <activity android:name=".Backgroundscan"/>
+    <activity android:name=".Editdata"/>
+    <activity android:name=".LoginAdmin"/>
+    <activity android:name=".LoginUser"/>
+    <activity android:name=".Scanqrcode2"/>
+    <activity android:name=".Backgroundscan2"/>
+    <activity android:name=".Editdata2"/>
+</application>
+</manifest>
