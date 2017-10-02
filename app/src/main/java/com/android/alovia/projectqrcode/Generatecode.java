@@ -54,14 +54,14 @@ public class Generatecode extends AppCompatActivity {
 
                             if (success){
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Generatecode.this);
-                                builder.setMessage("ค้นหา สำเร็จ")
+                                builder.setMessage("เพิ่มข้อมูล สำเร็จ")
                                         .setNegativeButton("OK", null)
                                         .create()
                                         .show();
                             }
                             else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Generatecode.this);
-                                builder.setMessage("ค้นหา ไม่สำเร็จ")
+                                builder.setMessage("เพิ่มข้อมูล ไม่สำเร็จ")
                                         .setNegativeButton("Retry", null)
                                         .create()
                                         .show();
