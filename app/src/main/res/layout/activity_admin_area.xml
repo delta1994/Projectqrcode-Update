@@ -83,6 +83,7 @@
         android:id="@+id/img_View"
         android:layout_width="305dp"
         android:layout_height="284dp"
+        style="@style/img_view"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"

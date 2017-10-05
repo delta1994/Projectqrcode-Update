@@ -10,15 +10,27 @@
 
     <style name="ToRTheme" parent="AppTheme" >
         <item name="colorPrimary">@color/ForestGreen</item>
-        <item name="colorPrimaryDark">@color/MedSpringGreen</item>
+        <item name="colorPrimaryDark">@color/Gold</item>
         <item name="colorAccent">@color/DarkGreen</item>
-        <item name="android:colorBackground">@color/LightCyan</item>
+        <item name="android:colorBackground">@color/WYellow</item>
     </style>
 
     <style name="btn_blue" parent="@android:style/Widget.Button">
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/bg_btn_button</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">1dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+    </style>
+
+    <style name="img_view" parent="@android:style/Widget.Button">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/bg_img_view</item>
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">16sp</item>
         <item name="android:textStyle">bold</item>

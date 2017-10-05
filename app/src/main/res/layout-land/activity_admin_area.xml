@@ -82,6 +82,7 @@
     <ImageView
         android:id="@+id/img_View"
         android:layout_width="258dp"
+        style="@style/img_view"
         android:layout_height="237dp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
