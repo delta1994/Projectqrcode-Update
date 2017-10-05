@@ -6,8 +6,84 @@
     android:layout_height="match_parent"
     tools:context="com.android.alovia.projectqrcode.Editdata">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:textSize="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:text="วันที่จัดซื้อ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.795" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="16dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ราคาต่อหน่วย"
+        android:textColor="@color/colorBlack"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.629" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:textSize="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="ตำแหน่งที่ตั้ง"
+        android:textColor="@color/colorBlack"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.472" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:textSize="16dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="8dp"
+        android:text="ชื่อครุภัณฑ์"
+        android:gravity="center_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.309" />
+
     <ImageView
-        android:id="@+id/imageView15"
+        android:id="@+id/imageView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -28,6 +104,7 @@
         android:id="@+id/etE_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
         android:ems="10"
         android:inputType="textPersonName"
         android:layout_marginRight="8dp"
@@ -39,13 +116,14 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintVertical_bias="0.242" />
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintVertical_bias="0.28" />
 
     <EditText
         android:id="@+id/etE_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="ตำแหน่งที่ตั้ง"
@@ -57,13 +135,14 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintVertical_bias="0.45" />
 
     <EditText
         android:id="@+id/etE_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
         android:hint="ราคาต่อหน่วย"
         android:ems="10"
         android:inputType="textPersonName"
@@ -75,13 +154,14 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintVertical_bias="0.583" />
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintVertical_bias="0.613" />
 
     <EditText
         android:id="@+id/etE_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="วันที่จัดซื้อ"
@@ -93,24 +173,24 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintVertical_bias="0.753" />
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintVertical_bias="0.783" />
 
     <Button
         android:id="@+id/btnE_edit"
-        android:layout_width="100dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="แก้ไข"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="8dp"
         style="@style/btn_blue"
+        android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.968" />
+        app:layout_constraintVertical_bias="0.972" />
 
     <TextView
         android:id="@+id/textVEA1"
@@ -119,7 +199,7 @@
         android:textColor="@color/colorBlack"
         android:gravity="center"
         android:textSize="16dp"
-        android:text="TextView"
+        android:text=""
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
@@ -128,6 +208,26 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="8dp"
-        app:layout_constraintVertical_bias="0.082" />
+        app:layout_constraintVertical_bias="0.105"
+        app:layout_constraintHorizontal_bias="0.666" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:textSize="16dp"
+        android:text="เลขครุภัณฑ์"
+        android:textColor="@color/colorBlack"
+        android:gravity="center_vertical"
+        android:layout_marginRight="8dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintHorizontal_bias="0.226"
+        app:layout_constraintVertical_bias="0.134" />
 
 </android.support.constraint.ConstraintLayout>

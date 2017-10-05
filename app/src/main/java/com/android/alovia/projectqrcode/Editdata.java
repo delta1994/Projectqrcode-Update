@@ -64,15 +64,16 @@ public class Editdata extends AppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
 
                             if (success) {
-                                Intent intent = new Intent(Editdata.this, AdminArea.class);
-
-                                Editdata.this.startActivity(intent);
 
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Editdata.this);
                                 builder.setMessage("แก้ไข สำเร็จ")
                                         .setNegativeButton("OK", null)
                                         .create()
                                         .show();
+
+                                Intent intent = new Intent(Editdata.this, AdminArea.class);
+                                Editdata.this.startActivity(intent);
+
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Editdata.this);
                                 builder.setMessage("แก้ไข ไม่สำเร็จ")

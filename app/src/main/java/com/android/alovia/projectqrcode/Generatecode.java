@@ -40,10 +40,10 @@ public class Generatecode extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final String Gnumber = Getnumber6.getText().toString();
-                final String Gdate = Getnumber7.getText().toString();
-                final String Glocate = Getnumber8.getText().toString();
-                final String Gdetail = Getnumber9.getText().toString();
-                final String Gstatus = Getnumber10.getText().toString();
+                final String Gname = Getnumber7.getText().toString();
+                final String Glocation = Getnumber8.getText().toString();
+                final String Gprice = Getnumber9.getText().toString();
+                final String Gdate = Getnumber10.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -71,7 +71,7 @@ public class Generatecode extends AppCompatActivity {
                         }
                     }
                 };
-                Backgroundgencode backgroundgencode = new Backgroundgencode(Gnumber, Gdate, Glocate, Gdetail, Gstatus, responseListener);
+                Backgroundgencode backgroundgencode = new Backgroundgencode(Gnumber, Gname, Glocation, Gprice, Gdate, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Generatecode.this);
                 queue.add(backgroundgencode);
             }
