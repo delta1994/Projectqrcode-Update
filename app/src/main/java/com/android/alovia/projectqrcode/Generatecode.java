@@ -53,7 +53,7 @@ public class Generatecode extends AppCompatActivity {
     EditText Getnumber1, Getnumber2, Getnumber3, Getnumber4,Getnumber5;
     private Button button1;
     private int LOAD_IMAGE_RESULTS = 1;
-    public  Bitmap bitmapasd;
+    public  Bitmap bitmapasd, bitmapasdnew, resized;
     ImageView imageView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +86,7 @@ public class Generatecode extends AppCompatActivity {
                 final String Glocation = Getnumber8.getText().toString();
                 final String Gprice = Getnumber9.getText().toString();
                 final String Gdate = Getnumber10.getText().toString();
-
+                final String Gimg = myBase64Image;
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -113,7 +113,7 @@ public class Generatecode extends AppCompatActivity {
                         }
                     }
                 };
-                Backgroundgencode backgroundgencode = new Backgroundgencode(Gnumber, Gname, Glocation, Gprice, Gdate, myBase64Image, responseListener);
+                Backgroundgencode backgroundgencode = new Backgroundgencode(Gnumber, Gname, Glocation, Gprice, Gdate, Gimg, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Generatecode.this);
                 queue.add(backgroundgencode);
             }
@@ -161,10 +161,11 @@ public class Generatecode extends AppCompatActivity {
                 try {
                     final Uri imageUri = data.getData();
                     final InputStream imageStream = getContentResolver().openInputStream(imageUri);
-                      bitmapasd = BitmapFactory.decodeStream(imageStream);
-
-                    imageView.setImageBitmap(bitmapasd);
-                    callencode(bitmapasd);
+                    bitmapasd = BitmapFactory.decodeStream(imageStream);
+                    bitmapasdnew = bitmapasd;
+                    resized = Bitmap.createScaledBitmap(bitmapasdnew, 200, 200, true);
+                    imageView.setImageBitmap(resized);
+                    callencode(resized);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                     Toast.makeText(Generatecode.this, "Something went wrong", Toast.LENGTH_LONG).show();
