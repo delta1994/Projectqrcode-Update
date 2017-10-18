@@ -3,11 +3,14 @@ package com.android.alovia.projectqrcode;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +31,7 @@ public class Backgroundscan extends AppCompatActivity {
     public static final String message11 = "aaaa";
     public static final int REQUEST_CODE = 100;
     public static final int PERMISSION_REQUEST = 200;
+    //private static String getText7;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,6 +88,7 @@ public class Backgroundscan extends AppCompatActivity {
                                                 String getText4 = jsonResponse.getString("data_location");
                                                 String getText5 = jsonResponse.getString("data_price");
                                                 String getText6 = jsonResponse.getString("data_date");
+                                                String getText7 = jsonResponse.getString("data_img");
 
                                                 Intent intent = new Intent(Backgroundscan.this, Editdata.class);
 
@@ -92,6 +97,8 @@ public class Backgroundscan extends AppCompatActivity {
                                                 intent.putExtra("location", getText4);
                                                 intent.putExtra("price", getText5);
                                                 intent.putExtra("date", getText6);
+                                                intent.putExtra("img", getText7);
+
                                                 Backgroundscan.this.startActivity(intent);
 
                                                 AlertDialog.Builder builder = new AlertDialog.Builder(Backgroundscan.this);

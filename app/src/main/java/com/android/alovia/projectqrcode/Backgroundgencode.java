@@ -14,7 +14,7 @@ import java.util.Map;
 public class Backgroundgencode extends StringRequest{
     private static final String REGISTER_REQUEST_URL = "http://jonhslim.pe.hu//pretest/Adddata.php";
     private Map<String, String> params;
-    public Backgroundgencode(String Gnumber, String Gname, String Glocation, String Gprice, String Gdate, Response.Listener<String> Listener){
+    public Backgroundgencode(String Gnumber, String Gname, String Glocation, String Gprice, String Gdate,String myBase64Image, Response.Listener<String> Listener){
         super(Request.Method.POST, REGISTER_REQUEST_URL, Listener, null);
         params = new HashMap<>();
         params.put("getnumber", Gnumber);
@@ -22,6 +22,7 @@ public class Backgroundgencode extends StringRequest{
         params.put("getlocation", Glocation);
         params.put("getprice", Gprice);
         params.put("getdate", Gdate);
+        params.put("getimg", myBase64Image);
     }
 
     @Override

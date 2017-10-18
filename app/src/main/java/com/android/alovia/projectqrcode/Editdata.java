@@ -1,12 +1,16 @@
 package com.android.alovia.projectqrcode;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
@@ -17,7 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Editdata extends AppCompatActivity {
-
+    private static Bitmap myBitmapAgain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +33,7 @@ public class Editdata extends AppCompatActivity {
         final EditText T3 = (EditText) findViewById(R.id.etE_location);
         final EditText T4 = (EditText) findViewById(R.id.etE_price);
         final EditText T5 = (EditText) findViewById(R.id.etE_date);
+        final ImageView I1 = (ImageView) findViewById(R.id.imgE_img1);
         final Button btnE_Edit = (Button) findViewById(R.id.btnE_edit);
 
 
@@ -38,12 +43,15 @@ public class Editdata extends AppCompatActivity {
         final String Location = intent.getStringExtra("location");
         final String Price = intent.getStringExtra("price");
         final String Date = intent.getStringExtra("date");
+        final String Image = intent.getStringExtra("img");
+        myBitmapAgain = decodeBase64(Image);
 
         T1.setText(Number);
         T2.setText(Name);
         T3.setText(Location);
         T4.setText(Price);
         T5.setText(Date);
+        I1.setImageBitmap(myBitmapAgain);
 
 
         btnE_Edit.setOnClickListener(new View.OnClickListener() {
@@ -97,6 +105,12 @@ public class Editdata extends AppCompatActivity {
         Intent intent231345 = new Intent(Editdata.this, AdminArea.class);
         startActivity(intent231345);
         finish();
+    }
+
+    public static Bitmap decodeBase64(String input)
+    {
+        byte[] decodedBytes = Base64.decode(input, 0);
+        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
     }
 }
 
