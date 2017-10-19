@@ -1,24 +1,18 @@
 package com.android.alovia.projectqrcode;
 
 import android.content.Intent;
-import android.support.v7.app.AlertDialog;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Base64;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class Editdata2 extends AppCompatActivity {
-
-    Button button;
+    private static Bitmap myBitmapAgain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +24,7 @@ public class Editdata2 extends AppCompatActivity {
         final TextView T3 = (TextView) findViewById(R.id.textVEU3);
         final TextView T4 = (TextView) findViewById(R.id.textVEU4);
         final TextView T5 = (TextView) findViewById(R.id.textVEU5);
+        final ImageView I1 = (ImageView) findViewById(R.id.imgE2_img2);
 
         Intent intent = getIntent();
         final String Number = intent.getStringExtra("number");
@@ -37,12 +32,15 @@ public class Editdata2 extends AppCompatActivity {
         final String Location = intent.getStringExtra("location");
         final String Price = intent.getStringExtra("price");
         final String Date = intent.getStringExtra("date");
+        final String Image = intent.getStringExtra("img");
+        myBitmapAgain = decodeBase64(Image);
 
         T1.setText(Number);
         T2.setText(Name);
         T3.setText(Location);
         T4.setText(Price);
         T5.setText(Date);
+        I1.setImageBitmap(myBitmapAgain);
 
     }
 
@@ -50,5 +48,10 @@ public class Editdata2 extends AppCompatActivity {
         Intent intent = new  Intent(Editdata2.this,UserArea.class);
         startActivity(intent);
         finish();
+    }
+    public static Bitmap decodeBase64(String input)
+    {
+        byte[] decodedBytes = Base64.decode(input, 0);
+        return BitmapFactory.decodeByteArray(decodedBytes, 0, decodedBytes.length);
     }
 }

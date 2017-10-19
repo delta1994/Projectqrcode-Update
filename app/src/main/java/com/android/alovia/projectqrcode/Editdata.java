@@ -28,13 +28,13 @@ public class Editdata extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editdata);
 
-        final TextView T1 = (TextView) findViewById(R.id.textVEA1);
-        final EditText T2 = (EditText) findViewById(R.id.etE_name);
-        final EditText T3 = (EditText) findViewById(R.id.etE_location);
-        final EditText T4 = (EditText) findViewById(R.id.etE_price);
-        final EditText T5 = (EditText) findViewById(R.id.etE_date);
-        final ImageView I1 = (ImageView) findViewById(R.id.imgE_img1);
-        final Button btnE_Edit = (Button) findViewById(R.id.btnE_edit);
+        final TextView T1 = (TextView) findViewById(R.id.tvET_tv112);
+        final EditText T2 = (EditText) findViewById(R.id.etET_Ename21);
+        final EditText T3 = (EditText) findViewById(R.id.etET_location21);
+        final EditText T4 = (EditText) findViewById(R.id.etET_Eprice21);
+        final EditText T5 = (EditText) findViewById(R.id.etET_Edate21);
+        final ImageView I1 = (ImageView) findViewById(R.id.imgEE_img11);
+        final Button btnE_Edit = (Button) findViewById(R.id.btnE_edit21);
 
 
         Intent intent = getIntent();

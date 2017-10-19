@@ -19,8 +19,6 @@ public class UserArea extends AppCompatActivity {
         imageView.setImageBitmap(bitmap);
     }
 
-
-
     public void btnA_Scanqrcode(View view){
         Intent intent = new Intent(UserArea.this, Backgroundscan2.class);
         startActivity(intent);

@@ -23,10 +23,8 @@ import org.json.JSONObject;
 
 public class Backgroundscan2 extends AppCompatActivity {
 
-    EditText tess;
     Button scanner;
     TextView result;
-    public static final String message11 = "aaaa";
     public static final int REQUEST_CODE = 100;
     public static final int PERMISSION_REQUEST = 200;
 
@@ -34,11 +32,8 @@ public class Backgroundscan2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_backgroundscan2);
-
         scanner = (Button) findViewById(R.id.btnU_Scan);
         result = (TextView) findViewById(R.id.tvUresult);
-        tess = (EditText) findViewById(R.id.etU_GetText);
-
         if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.CAMERA}, PERMISSION_REQUEST);
         }
@@ -61,13 +56,10 @@ public class Backgroundscan2 extends AppCompatActivity {
                     @Override
                     public void run() {
                         result.setText(barcode.displayValue);
-                        tess.setText(barcode.displayValue);
-
                         btnSearch.setOnClickListener(new View.OnClickListener() {
                             @Override
                             public void onClick(View view) {
-                                final String getText = tess.getText().toString();
-
+                                final String getText = result.getText().toString();
                                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                                     @Override
                                     public void onResponse(String response) {
@@ -80,6 +72,7 @@ public class Backgroundscan2 extends AppCompatActivity {
                                                 String getText4 = jsonResponse.getString("data_location");
                                                 String getText5 = jsonResponse.getString("data_price");
                                                 String getText6 = jsonResponse.getString("data_date");
+                                                String getText7 = jsonResponse.getString("data_img");
 
                                                 Intent intent = new Intent(Backgroundscan2.this, Editdata2.class);
 
@@ -88,17 +81,18 @@ public class Backgroundscan2 extends AppCompatActivity {
                                                 intent.putExtra("location", getText4);
                                                 intent.putExtra("price", getText5);
                                                 intent.putExtra("date", getText6);
+                                                intent.putExtra("img", getText7);
                                                 Backgroundscan2.this.startActivity(intent);
 
                                                 AlertDialog.Builder builder = new AlertDialog.Builder(Backgroundscan2.this);
-                                                builder.setMessage("Search success")
+                                                builder.setMessage("ค้าหา สำเร็จ")
                                                         .setNegativeButton("OK", null)
                                                         .create()
                                                         .show();
                                             }
                                             else {
                                                 AlertDialog.Builder builder = new AlertDialog.Builder(Backgroundscan2.this);
-                                                builder.setMessage("Search Failed")
+                                                builder.setMessage("ค้นหา ไม่สำเร็จ")
                                                         .setNegativeButton("Retry", null)
                                                         .create()
                                                         .show();
@@ -118,7 +112,6 @@ public class Backgroundscan2 extends AppCompatActivity {
             }
         }
     }
-
     public void on_BBback(View view){
         Intent intent32 = new Intent(Backgroundscan2.this, UserArea.class);
         startActivity(intent32);

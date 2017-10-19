@@ -67,7 +67,6 @@ public class Generatecode extends AppCompatActivity {
         final EditText Getnumber10 = (EditText) findViewById(R.id.etGen_status);
         final Button btnAdddata = (Button) findViewById(R.id.btnGen_Add);
         final Button btngetimg = (Button) findViewById(R.id.btnG_Getimg);
-
         imageView =(ImageView)findViewById(R.id.imgG_img232);
         btngetimg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +76,6 @@ public class Generatecode extends AppCompatActivity {
                 startActivityForResult(photoPickerIntent, LOAD_IMAGE_RESULTS);
             }
         });
-
         btnAdddata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -96,14 +94,14 @@ public class Generatecode extends AppCompatActivity {
 
                             if (success){
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Generatecode.this);
-                                builder.setMessage("เพิ่มข้อมูล สำเร็จ")
+                                builder.setMessage("เพิ่มเข้าฐานข้อมูล สำเร็จ")
                                         .setNegativeButton("OK", null)
                                         .create()
                                         .show();
                             }
                             else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Generatecode.this);
-                                builder.setMessage("เพิ่มข้อมูล ไม่สำเร็จ")
+                                builder.setMessage("เพิ่มเข้าฐานข้อมูล ไม่สำเร็จ")
                                         .setNegativeButton("Retry", null)
                                         .create()
                                         .show();
@@ -118,7 +116,6 @@ public class Generatecode extends AppCompatActivity {
                 queue.add(backgroundgencode);
             }
         });
-
         final Context context = this;
          Getnumber1 = (EditText) this.findViewById(R.id.etGen_number);
          Getnumber2 = (EditText) this.findViewById(R.id.etGen_date);
@@ -143,20 +140,15 @@ public class Generatecode extends AppCompatActivity {
                 }
             }
         });
-
     }
     public void on_Gback(View view){
         Intent intent22233 = new Intent(Generatecode.this,AdminArea.class);
         startActivity(intent22233);
         finish();
     }
-
-
         @Override
         protected void onActivityResult(int reqCode, int resultCode, Intent data) {
             super.onActivityResult(reqCode, resultCode, data);
-
-
             if (resultCode == RESULT_OK) {
                 try {
                     final Uri imageUri = data.getData();
@@ -170,7 +162,6 @@ public class Generatecode extends AppCompatActivity {
                     e.printStackTrace();
                     Toast.makeText(Generatecode.this, "Something went wrong", Toast.LENGTH_LONG).show();
                 }
-
             }else {
                 Toast.makeText(Generatecode.this, "You haven't picked Image",Toast.LENGTH_LONG).show();
             }

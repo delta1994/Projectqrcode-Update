@@ -66,6 +66,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:textColor="@color/colorBlack"
         android:layout_marginTop="8dp"
         android:text="ลงชื่อเข้าใช้"
         app:layout_constraintBottom_toBottomOf="parent"
