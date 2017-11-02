@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class Backgroundsearch2 extends StringRequest {
 
-    private static final String SEARCH_REQUEST_URL = "http://jonhslim.pe.hu/pretest/Search2.php";
+    private static final String SEARCH_REQUEST_URL = "http://rattaphum.rmutsv.ac.th/durable/Search2.php";
     private Map<String, String> params;
 
     public Backgroundsearch2(String getText, Response.Listener<String> Listener) {

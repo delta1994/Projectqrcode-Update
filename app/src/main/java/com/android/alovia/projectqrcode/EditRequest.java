@@ -13,7 +13,7 @@ import java.util.Map;
 
 public class EditRequest extends StringRequest {
 
-    private static final String EDIT_REQUEST_URL = "http://jonhslim.pe.hu/pretest/Edit.php";
+    private static final String EDIT_REQUEST_URL = "http://rattaphum.rmutsv.ac.th/durable/Edit.php";
     private Map<String, String> params;
     public EditRequest(String enumber, String ename, String elocation, String eprice, String edate, Response.Listener<String> Listener){
         super(Request.Method.POST, EDIT_REQUEST_URL, Listener, null);

@@ -12,7 +12,7 @@ import java.util.Map;
  */
 
 public class Backgroundgencode extends StringRequest{
-    private static final String REGISTER_REQUEST_URL = "http://jonhslim.pe.hu//pretest/Adddata.php";
+    private static final String REGISTER_REQUEST_URL = "http://rattaphum.rmutsv.ac.th/durable/Adddata.php";
     private Map<String, String> params;
     public Backgroundgencode(String Gnumber, String Gname, String Glocation, String Gprice, String Gdate,String Gimg, Response.Listener<String> Listener){
         super(Request.Method.POST, REGISTER_REQUEST_URL, Listener, null);
